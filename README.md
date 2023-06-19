@@ -16,16 +16,16 @@
 
 
 ## 해결방안
-### 결측치 처리
+### 1. 결측치 처리
 - KNNImputer
 - 1:1 대응
 
-### 준지도 학습
-1. selftraining <br>
+### 2. 준지도 학습
+1) selftraining <br>
    - catboost <br>
    - randomforest <br>
    - svm <br>
-2. 
+2)
    - 
    
 <br>
