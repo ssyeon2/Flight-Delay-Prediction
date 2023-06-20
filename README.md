@@ -4,6 +4,11 @@
 <br>
 <br>
 
+**데이터** <br>
+- https://dacon.io/competitions/official/236094/overview/rules
+- 외부 데이터 사용 금지
+<br>
+
 **평가** <br>
 ![image](https://github.com/ssyeon2/Flight-Delay-Prediction/assets/105052724/f2283b00-adfd-438a-80f4-81e8ab6b0c10)
 - 심사 기준: LogLoss
