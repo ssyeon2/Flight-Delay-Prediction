@@ -21,16 +21,36 @@
 
 
 ## 해결방안
-### 1. 결측치 처리
-- KNNImputer
-- 1:1 대응
+### 1. EDA <br>
+**대응 변수 확인하기**
+1) 1:1대응 <br>
+   (1) Origin_Airport, Origin_Airport_ID <br>
+   (2) Destination_Airport, Destination_Airport_ID <br>
+   (3) Airline, Carrier_ID(DOT) <br>
+   -> 둘 중 하나의 변수는 drop <br>
+2) 1:N대응 <br>
+   (1) Origin_Airport, Origin_State <br>
+   (2) Destination_Airport, Destination_State <br>
+3) 대응 관계 없음 <br>
+   (1) Airline, Tail_Number <br>
+   (2) Airline, Carrier_Code(IATA) <br>
 
-### 2. 준지도 학습
-1) selftraining <br>
+### 2. 결측치 처리 <br>
+1) Estimated_Departure_Time, Estimated_Arrival_Time 변수
+   -> KNNImputer 사용
+2) _Airport → _State 변수
+   -> N:1 대응으로 결측치 대체
+3) Carrier_ID → Airline 변수
+   -> 1:1 대응으로 결측치 대체
+4) 대응으로 채울 수 없는 값
+   - train -> 행 삭제
+   - test -> 최빈값
+
+
+### 3. 비지도 학습 <br>
+**selftraining** <br>
+   - [최고 성능] randomforest <br>
    - catboost <br>
-   - randomforest <br>
    - svm <br>
-2)
-   - 
    
 <br>
